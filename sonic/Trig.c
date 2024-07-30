@@ -6,10 +6,13 @@
 
 void Trigger() //function
 {
+		//initial for 0
+		digitalWrite(TRIG, 0);
+		delayMicroseconds(10);
 		// Trigger signal
 		digitalWrite(trig, 1);
 		delayMicroseconds(10); //delay->ms, delayMicroseconds->us
 		digitalWrite(trig, 0);
-		delayMicroseconds(200);
+		delayMicroseconds(200); //wait for burst end
 }
 
